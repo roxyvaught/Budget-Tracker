@@ -13,7 +13,13 @@
   * [Questions](#questions)
 
   ## Installation
-  * Clone the budget tracker repo (ensure that you have MongoDB installed) * Run `npm install` * Start the server with `npm start` 
+  * Clone the budget tracker repo (ensure that you have MongoDB installed) 
+  * Run `npm install` 
+  * Start the server with `npm start`
+
+  From the deployed link, click on chrome settings and drop down to `Install PWA-Budget-Tracker`
+
+  <img src= "public\img\pwa.png" alt="pwa function" /> 
   
   ## Usage
   Run the following command in the command line and answer the questions Enter deposits and deductions and enter the amount. Your historical transactions will appear on the page
