@@ -1,5 +1,7 @@
+
 let transactions = [];
 let myChart;
+
 
 fetch("/api/transaction")
   .then(response => {
@@ -112,6 +114,7 @@ function sendTransaction(isAdding) {
   populateTable();
   populateTotal();
   
+  if (navigator.onLine) {
   // also send to server
   fetch("/api/transaction", {
     method: "POST",
@@ -142,6 +145,14 @@ function sendTransaction(isAdding) {
     nameEl.value = "";
     amountEl.value = "";
   });
+} else {
+  saveRecord(transaction);
+
+  // clear form
+  nameEl.value = "";
+  amountEl.value = "";
+}
+
 }
 
 document.querySelector("#add-btn").onclick = function() {
